@@ -21,8 +21,8 @@ namespace BlowOut
 
             routes.MapRoute(
                 name: "email",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Email", name = UrlParameter.Optional, emai = UrlParameter.Optional }
+                url: "{controller}/{action}",
+                defaults: new { controller = "Home", action = "Email", name = UrlParameter.Optional, email = UrlParameter.Optional }
             );
         }
     }

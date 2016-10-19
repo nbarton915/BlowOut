@@ -1,0 +1,22 @@
+﻿body {
+}
+
+.myFooterText {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#jumbotrn {
+    background-image: url('Trumpet.png');
+    background-position: 100% top;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+
+#jumbotrn h1 {
+    color: brown;
+}
+
+#jumbotrn p {
+    color: saddlebrown;
+}
