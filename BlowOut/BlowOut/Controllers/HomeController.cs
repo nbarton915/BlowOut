@@ -13,7 +13,12 @@ namespace BlowOut.Controllers
             return View();
         }
 
-        public ActionResult Rentals(String instrument, String insCondition)
+        public ActionResult Rentals()
+        {
+            return View();
+        }
+
+        public ActionResult InstrumentRental(String instrument, String insCondition)
         {
             if (instrument == "Trumpet" && insCondition == "New")
             {
