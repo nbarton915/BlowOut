@@ -22,7 +22,7 @@ namespace BlowOut.Controllers
         {
             if (instrument == "Trumpet" && insCondition == "New")
             {
-                ViewBag.image = "'~/Content/TrumpetSquare.jpg'";
+                ViewBag.image = "~/Content/TrumpetSquare.jpg";
                 ViewBag.RentalPrice = "$55 a month";
                 ViewBag.Instrument = "Trumpet";
                 ViewBag.Type = "New";

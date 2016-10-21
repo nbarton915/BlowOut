@@ -177,6 +177,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\ClarinetSquare.jpg" />
     <Content Include="Content\FluteSquare.jpg" />
+    <Content Include="Content\full-width-pics.css" />
     <Content Include="Content\SaxophoneSquare.jpg" />
     <Content Include="Content\StyleSheet1.css" />
     <Content Include="Content\thumbnail-gallery.css" />
