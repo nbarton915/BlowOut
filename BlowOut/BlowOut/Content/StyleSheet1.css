@@ -25,12 +25,12 @@
   display: inline-block;
   display: block;
   height: auto;
-  max-width: 100%;
+  max-width: 400px;
   padding: 4px;
   line-height: 1.428571429;
   background: rgba(27.50%, 31.00%, 41.50%, 0.9);
   position: absolute;
-  width: 325px;
+  width: 349px;
   height: 100%;
   opacity: 0;
   transition: all ease 0.5s;
@@ -72,6 +72,7 @@
     margin: 0;
 }
 
-.ovrly-btn {
-    
+.ovrly-btn a {
+    color: white;
 }
+

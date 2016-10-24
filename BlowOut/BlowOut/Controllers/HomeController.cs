@@ -22,84 +22,84 @@ namespace BlowOut.Controllers
         {
             if (instrument == "Trumpet" && insCondition == "New")
             {
-                ViewBag.image = "~/Content/TrumpetSquare.jpg";
+                ViewBag.image = "TrumpetSquare.jpg";
                 ViewBag.RentalPrice = "$55 a month";
                 ViewBag.Instrument = "Trumpet";
                 ViewBag.Type = "New";
             }
             else if (instrument == "Trumpet" && insCondition == "Used")
             {
-                ViewBag.image = "'~/Content/TrumpetSquare.jpg'";
+                ViewBag.image = "TrumpetSquare.jpg";
                 ViewBag.RentalPrice = "$25 a month";
                 ViewBag.Instrument = "Trumpet";
                 ViewBag.Type = "Used";
             }
             else if (instrument == "Trombone" && insCondition == "New")
             {
-                ViewBag.image = "'~/Content/TromboneSquare.jpg'";
+                ViewBag.image = "TromboneSquare.jpg";
                 ViewBag.RentalPrice = "$60 a month";
                 ViewBag.Instrument = "Trombone";
                 ViewBag.Type = "New";
             }
             else if (instrument == "Trombone" && insCondition == "Used")
             {
-                ViewBag.image = "'~/Content/TromboneSquare.jpg'";
+                ViewBag.image = "TromboneSquare.jpg";
                 ViewBag.RentalPrice = "$35 a month";
                 ViewBag.Instrument = "Trombone";
                 ViewBag.Type = "Used";
             }
             else if (instrument == "Tuba" && insCondition == "New")
             {
-                ViewBag.image = "'~/Content/TubaSquare.jpg'";
+                ViewBag.image = "TubaSquare.jpg";
                 ViewBag.RentalPrice = "$70 a month";
                 ViewBag.Instrument = "Tuba";
                 ViewBag.Type = "New";
             }
             else if (instrument == "Tuba" && insCondition == "Used")
             {
-                ViewBag.image = "'~/Content/TubaSquare.jpg'";
+                ViewBag.image = "TubaSquare.jpg";
                 ViewBag.RentalPrice = "$50 a month";
                 ViewBag.Instrument = "Tuba";
                 ViewBag.Type = "Used";
             }
             else if (instrument == "Flute" && insCondition == "New")
             {
-                ViewBag.image = "'~/Content/FluteSquare.jpg'";
+                ViewBag.image = "FluteSquare.jpg";
                 ViewBag.RentalPrice = "$40 a month";
                 ViewBag.Instrument = "Flute";
                 ViewBag.Type = "New";
             }
             else if (instrument == "Flute" && insCondition == "Used")
             {
-                ViewBag.image = "'~/Content/FluteSquare.jpg'";
+                ViewBag.image = "FluteSquare.jpg";
                 ViewBag.RentalPrice = "$25 a month";
                 ViewBag.Instrument = "Flute";
                 ViewBag.Type = "Used";
             }
             else if (instrument == "Clarinet" && insCondition == "New")
             {
-                ViewBag.image = "'~/Content/ClarinetSquare.jpg'";
+                ViewBag.image = "ClarinetSquare.jpg";
                 ViewBag.RentalPrice = "$35 a month";
                 ViewBag.Instrument = "Clarinet";
                 ViewBag.Type = "New";
             }
             else if (instrument == "Clarinet" && insCondition == "Used")
             {
-                ViewBag.image = "'~/Content/ClarinetSquare.jpg'";
+                ViewBag.image = "ClarinetSquare.jpg";
                 ViewBag.RentalPrice = "$27 a month";
                 ViewBag.Instrument = "Clarinet";
                 ViewBag.Type = "Used";
             }
             else if (instrument == "Saxophone" && insCondition == "New")
             {
-                ViewBag.image = "'~/Content/SaxophoneSquare.jpg'";
+                ViewBag.image = "SaxophoneSquare.jpg";
                 ViewBag.RentalPrice = "$42 a month";
                 ViewBag.Instrument = "Saxophone";
                 ViewBag.Type = "New";
             }
             else if (instrument == "Saxophone" && insCondition == "Used")
             {
-                ViewBag.image = "'~/Content/SaxophoneSquare.jpg'";
+                ViewBag.image = "SaxophoneSquare.jpg";
                 ViewBag.RentalPrice = "$30 a month";
                 ViewBag.Instrument = "Saxophone";
                 ViewBag.Type = "Used";
