@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Nathan Barton section 002 Home Controller that handles the logic for the instrument rentals
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
