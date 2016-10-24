@@ -38,7 +38,7 @@
 
     <!-- Full Width Image Header with Logo -->
     <!-- Image backgrounds are set within the full-width-pics.css file. -->
-    <header class="image-bg-fluid-height">
+    <header class="image-bg-fluid-height" id="pict-head">
         <img class="img-responsive img-center" src="~/Content/@(ViewBag.Image)" alt="@ViewBag.Instrument">
     </header>
 
@@ -47,8 +47,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="section-heading">@ViewBag.Instrument</h1>
-                    <p class="lead section-lead">@ViewBag.Type</p>
+                    <h1 class="section-heading" id="deah">@ViewBag.Instrument</h1>
+                    <p class="lead section-lead" id="deal">@ViewBag.Type</p>
                     <p class="section-paragraph">After 18 months of renting, the instrument is considered to be sold</p>
                     <p class="section-paragraph">If the instrument is returned within three months of signing the contract then a $200 restocking fee will be applied</p>
                     <p class="section-paragraph">If the instrument is returned after three months then any equity is forfeited on the instrument</p>

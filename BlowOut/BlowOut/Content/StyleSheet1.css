@@ -76,3 +76,22 @@
     color: white;
 }
 
+section {
+    margin-top: 0px;
+}
+
+#pict-head {
+    height: 100px;
+}
+
+#deal {
+    margin-top: 0px;
+}
+
+#deah {
+    margin-bottom: 0px;
+}
+
+.section-paragraph {
+    margin: 0px !important;
+}
