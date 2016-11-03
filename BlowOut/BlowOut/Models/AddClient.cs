@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -49,11 +50,11 @@ namespace BlowOut.Models
         [DisplayName("Phone Number")]
         public string phone { get; set; }
 
-        [Key]
-        public int instrumentID { get; set; }
-        public string description { get; set; }
-        public string type { get; set; }
-        public double price { get; set; }
-        public int clientID { get; set; }
+       //[Key]
+        //public int instrumentID { get; set; }
+        //public string description { get; set; }
+        //public string type { get; set; }
+        //public double price { get; set; }
+        //public int clientID { get; set; }
     }
 }

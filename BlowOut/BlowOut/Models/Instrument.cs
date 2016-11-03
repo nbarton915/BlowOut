@@ -14,7 +14,7 @@ namespace BlowOut.Models
         public int instrumentID { get; set; }
         public string description { get; set; }
         public string type { get; set; }
-        public double price { get; set; }
-        public int clientID { get; set; }
+        public decimal price { get; set; }
+        public int? clientID { get; set; }
     }
 }

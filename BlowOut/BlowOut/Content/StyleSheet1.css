@@ -26,7 +26,7 @@ body {
 .caption {
   display: inline-block;
   display: block;
-  height: auto;
+  height: 235px !important;
   max-width: 400px;
   padding: 4px;
   line-height: 1.428571429;
@@ -43,7 +43,7 @@ body {
 .caption-top {
   margin-top: 10%;
   text-align: center;
-  height: 50%;
+  height: auto;
 }
 
 .caption-bottom {

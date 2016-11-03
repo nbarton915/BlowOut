@@ -5,11 +5,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BlowOut.Models;
+using BlowOut.DAL;
 
 namespace BlowOut.Controllers
 {
     public class HomeController : Controller
     {
+        private BlowOut1Context db = new BlowOut1Context();
+
         public ActionResult BlowOut()
         {
             return View();
@@ -17,7 +21,7 @@ namespace BlowOut.Controllers
 
         public ActionResult Rentals()
         {
-            return View();
+            return View(db.Instuments.ToList());
         }
 
         public ActionResult InstrumentRental(String instrument, String insCondition)

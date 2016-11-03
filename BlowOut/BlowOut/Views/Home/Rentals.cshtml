@@ -1,8 +1,11 @@
 ﻿<!-- Nathan Barton section 002 Rentals view which shows all of the available rentals -->
+@model IEnumerable<BlowOut.Models.Instrument>
+
 @{
     ViewBag.Title = "Rentals";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,6 +36,7 @@
 </head>
 
 <body>
+    <p>@Html.ActionLink("Create New", "Create")</p>
 
     <!-- Page Content -->
     <div class="container">
@@ -42,110 +46,23 @@
             <div class="col-lg-12">
                 <h1 class="page-header">Thumbnail Gallery</h1>
             </div>
-
+            @foreach (var item in Model)
+            {
+                string imageName = string.Format("../Content/{0}Square.jpg", item.description);
             <div class="col-lg-4 col-md-4 col-xs-6 thumb">
+                <h4>@item.type</h4>
                 <div class="caption">
                     <div class="caption-top">
                         <div class="caption-content">
-                            <button class="btn btn-primary ovrly-btn">@Html.ActionLink("New", "InstrumentRental", "Home", new { instrument = "Trumpet", insCondition = "New", style = "color:white;" }, null)</button>
-                        </div>
-                    </div>
-                    <div class="caption-bottom">
-                        <div class="caption-content">
-                            <button class="btn btn-primary ovrly-btn">@Html.ActionLink("Old", "InstrumentRental", "Home", new { instrument = "Trumpet", insCondition = "Used" }, null)</button>
+                            <button class="btn btn-primary ovrly-btn">@Html.ActionLink(item.description, "Create", new { id=item.instrumentID }, null)</button>
                         </div>
                     </div>
                 </div>
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="~/Content/TrumpetSquare.jpg" alt="">
+                    <img class="img-responsive" src='@imageName' alt="">
                 </a>
             </div>
-            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
-                <div class="caption">
-                    <div class="caption-top">
-                        <div class="caption-content">
-                            <button class="btn btn-primary ovrly-btn">@Html.ActionLink("New", "InstrumentRental", "Home", new { instrument = "Trombone", insCondition = "New" }, null)</button>
-                        </div>
-                    </div>
-                    <div class="caption-bottom">
-                        <div class="caption-content">
-                            <button class="btn btn-primary ovrly-btn">@Html.ActionLink("Old", "InstrumentRental", "Home", new { instrument = "Trombone", insCondition = "Used" }, null)</button>
-                        </div>
-                    </div>
-                </div>
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="~/Content/TromboneSquare.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
-                <div class="caption">
-                    <div class="caption-top">
-                        <div class="caption-content">
-                            <button class="btn btn-primary ovrly-btn">@Html.ActionLink("New", "InstrumentRental", "Home", new { instrument = "Tuba", insCondition = "New" }, null)</button>
-                        </div>
-                    </div>
-                    <div class="caption-bottom">
-                        <div class="caption-content">
-                            <button class="btn btn-primary ovrly-btn">@Html.ActionLink("Old", "InstrumentRental", "Home", new { instrument = "Tuba", insCondition = "Used" }, null)</button>
-                        </div>
-                    </div>
-                </div>
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="~/Content/TubaSquare.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
-                <div class="caption">
-                    <div class="caption-top">
-                        <div class="caption-content">
-                            <button class="btn btn-primary ovrly-btn">@Html.ActionLink("New", "InstrumentRental", "Home", new { instrument = "Flute", insCondition = "New" }, null)</button>
-                        </div>
-                    </div>
-                    <div class="caption-bottom">
-                        <div class="caption-content">
-                            <button class="btn btn-primary ovrly-btn">@Html.ActionLink("Old", "InstrumentRental", "Home", new { instrument = "Flute", insCondition = "Used" }, null)</button>
-                        </div>
-                    </div>
-                </div>
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="~/Content/FluteSquare.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
-                <div class="caption">
-                    <div class="caption-top">
-                        <div class="caption-content">
-                            <button class="btn btn-primary ovrly-btn">@Html.ActionLink("New", "InstrumentRental", "Home", new { instrument = "Clarinet", insCondition = "New" }, null)</button>
-                        </div>
-                    </div>
-                    <div class="caption-bottom">
-                        <div class="caption-content">
-                            <button class="btn btn-primary ovrly-btn">@Html.ActionLink("Old", "InstrumentRental", "Home", new { instrument = "Clarinet", insCondition = "Used" }, null)</button>
-                        </div>
-                    </div>
-                </div>
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="~/Content/ClarinetSquare.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
-                <div class="caption">
-                    <div class="caption-top">
-                        <div class="caption-content">
-                            <button class="btn btn-primary ovrly-btn">@Html.ActionLink("New", "InstrumentRental", "Home", new { instrument = "Saxophone", insCondition = "New" }, null)</button>
-                        </div>
-                    </div>
-                    <div class="caption-bottom">
-                        <div class="caption-content">
-                            <button class="btn btn-primary ovrly-btn">@Html.ActionLink("Old", "InstrumentRental", "Home", new { instrument = "Saxophone", insCondition = "Used" }, null)</button>
-                        </div>
-                    </div>
-                </div>
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="~/Content/SaxophoneSquare.jpg" alt="">
-                </a>
-            </div>
-            
+            }
         </div>
 
         <hr>
