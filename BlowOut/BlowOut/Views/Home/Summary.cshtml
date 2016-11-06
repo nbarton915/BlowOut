@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "Summary";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Order Summary</h2>
+
+<h3>Thank you @ViewBag.Client.firstname for ordering through us. Please check the information below.</h3>
+
+<table class="table">
+    <tr>
+        <th>
+            Order ID
+        </th>
+        <th>
+            Instrument info
+        </th>
+        <th>
+            Type
+        </th>
+        <th>
+            Instrument Description
+        </th>
+        <th>
+            Image
+        </th>
+        <th>
+            Monthly Price
+        </th>
+        <th>
+            Total
+        </th>
+    </tr>
+    <tr>
+        <td>
+            @ViewBag.Instrument.clientID
+        </td>
+        <td>
+            Case not included with rentals
+        </td>
+        <td>
+            @ViewBag.Instrument.type
+        </td>
+        <td>
+            @ViewBag.Instrument.description
+        </td>
+        <td>
+            <img src='@(ViewBag.Image)' class="grid-img"/>
+        </td>
+        <td>
+            @ViewBag.Instrument.price
+        </td>
+        <td>
+            @ViewBag.Total
+        </td>
+    </tr>
+
+
+</table>

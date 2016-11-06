@@ -183,6 +183,10 @@
     <Content Include="Content\ClarinetSquare.jpg" />
     <Content Include="Content\FluteSquare.jpg" />
     <Content Include="Content\full-width-pics.css" />
+    <Content Include="Content\Images\BMImage.jpg" />
+    <Content Include="Content\Images\Henrique.png" />
+    <Content Include="Content\Images\NathanBartonImage.jpg" />
+    <Content Include="Content\Images\SWImage.jpg" />
     <Content Include="Content\SaxophoneSquare.jpg" />
     <Content Include="Content\StyleSheet1.css" />
     <Content Include="Content\thumbnail-gallery.css" />
@@ -251,6 +255,8 @@
     <Content Include="Views\Clients\Details.cshtml" />
     <Content Include="Views\Clients\Edit.cshtml" />
     <Content Include="Views\Clients\Index.cshtml" />
+    <Content Include="Views\Home\Create.cshtml" />
+    <Content Include="Views\Home\Summary.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

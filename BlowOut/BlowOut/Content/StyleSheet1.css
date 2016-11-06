@@ -97,3 +97,19 @@ section {
 .section-paragraph {
     margin: 0px !important;
 }
+
+.grid-img {
+    height: 50px;
+    width: 50px;
+}
+
+.img-sizing {
+    height: 200px;
+    width: 200px:
+
+}
+
+.img-center {
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;

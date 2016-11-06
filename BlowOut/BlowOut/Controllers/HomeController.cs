@@ -127,5 +127,55 @@ namespace BlowOut.Controllers
 
             return View();
         }
+
+        #region Create ActionMethod
+
+        [HttpGet]
+        public ActionResult Create(int id)
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "clientID,firstname,lastname,address,city,state,zip,email,phone")] Client client, int ID)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Clients.Add(client);
+                db.SaveChanges();
+
+                //lookup instrument
+                Instrument instrument = db.Instuments.Find(ID);
+                //update instrument
+                instrument.clientID = client.clientID;
+                //save changes
+                db.SaveChanges();
+
+                return RedirectToAction("Summary", new { ClientID = client.clientID, InstrumentID = instrument.instrumentID });
+            }
+
+            return View(client);
+        }
+
+        #endregion
+
+        #region Summary ActionMethod
+
+        public ActionResult Summary(int ClientID, int InstrumentID)
+        {
+            Client client = db.Clients.Find(ClientID);
+            Instrument instrument = db.Instuments.Find(InstrumentID);
+
+            ViewBag.Client = client;
+            ViewBag.Instrument = instrument;
+
+            ViewBag.Total = instrument.price * 18;
+            ViewBag.Image = string.Format("../Content/{0}Square.jpg", instrument.description);
+
+            return View();
+        }
+
+        #endregion
     }
 }
