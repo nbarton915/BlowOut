@@ -9,6 +9,7 @@ using BlowOut.Models;
 using BlowOut.DAL;
 using System.Net;
 using System.Data.Entity;
+using System.Web.Security;
 
 namespace BlowOut.Controllers
 {
@@ -182,6 +183,7 @@ namespace BlowOut.Controllers
 
         #region UpdateData ActionResult
 
+        [Authorize]
         public ActionResult UpdateData()
         {
             return View(db.Clients.ToList());
@@ -265,5 +267,33 @@ namespace BlowOut.Controllers
         }
 
         #endregion
+
+        #region Login ActionResult
+
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(FormCollection form, bool rememberMe = false)
+        {
+            String name = form["Name"].ToString();
+            String password = form["Password"].ToString();
+
+            if (string.Equals(name, "Missouri") && (string.Equals(password, "ShowMe")))
+            {
+                FormsAuthentication.SetAuthCookie(name, rememberMe);
+
+                return RedirectToAction("UpdateData", "Home");
+            }
+            else
+            {
+                return View();
+            }
+        }
+
+        #endregion
+
     }
 }
