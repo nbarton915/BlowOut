@@ -10,6 +10,7 @@ using BlowOut.DAL;
 using System.Net;
 using System.Data.Entity;
 using System.Web.Security;
+using Microsoft.Owin.Security;
 
 namespace BlowOut.Controllers
 {
@@ -290,6 +291,43 @@ namespace BlowOut.Controllers
             else
             {
                 return View();
+            }
+        }
+
+        #endregion
+
+        #region Logoff ActionResult
+
+        //
+        // POST: /Account/LogOff
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult LogOff()
+        {
+            AuthenticationManager.SignOut();
+            return RedirectToAction("Index", "Home");
+        }
+
+        //
+        // GET: /Account/ExternalLoginFailure
+        [AllowAnonymous]
+        public ActionResult ExternalLoginFailure()
+        {
+            return View();
+        }
+
+        #endregion
+
+        #region Helpers
+
+        // Used for XSRF protection when adding external logins
+        private const string XsrfKey = "XsrfId";
+
+        private IAuthenticationManager AuthenticationManager
+        {
+            get
+            {
+                return HttpContext.GetOwinContext().Authentication;
             }
         }
 
