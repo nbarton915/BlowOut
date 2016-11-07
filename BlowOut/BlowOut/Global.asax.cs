@@ -8,7 +8,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using BlowOut.Models;
 using BlowOut.DAL;
-using System.Data.Entity;
+
 
 namespace BlowOut
 {
