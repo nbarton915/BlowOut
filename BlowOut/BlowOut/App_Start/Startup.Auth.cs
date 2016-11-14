@@ -58,11 +58,11 @@ namespace BlowOut
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "924009192068-38cqvksdcfdp1jt92rhhci4ci044i8jj.apps.googleusercontent.com",
+                ClientSecret = "y8Yzo0Qw1cWWLJ0rfPzRO7Vi"
+            });
       
         }
       
